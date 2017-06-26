@@ -2,6 +2,7 @@ package insertionsort;
 
 import interfaces.SortPerformer;
 
+import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -32,9 +33,7 @@ public class InsertionSortStarter {
 			}
 		};
 
-		long init = System.currentTimeMillis();
 		insertionSort.sort(sourceDataToSort);
-		System.out.println(System.currentTimeMillis() - init);
-		//		Arrays.stream(sourceDataToSort).forEach(System.out::println);
+		Arrays.stream(sourceDataToSort).forEach(System.out::println);
 	}
 }
